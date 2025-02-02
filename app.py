@@ -11,6 +11,13 @@ nav = get_nav_from_toml(
     "streamlit/pages.toml"
 )
 
+st.write("🔍 Loaded navigation:", nav)  # TOML 로드 결과 출력
+
+if not nav:
+    st.error("🚨 TOML 파일을 찾을 수 없거나 페이지 목록이 비어 있습니다. TOML 설정을 확인하세요.")
+else:
+    st.success("✅ 네비게이션이 정상적으로 로드되었습니다.")
+
 # 네비게이션
 pg = st.navigation(nav)
 
