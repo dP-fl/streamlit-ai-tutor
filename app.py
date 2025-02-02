@@ -8,7 +8,7 @@ sections = st.sidebar.toggle("Sections", value=True, key="use_sections")
 
 # 네비게이션 로드 (섹션 포함 여부에 따라 파일 변경)
 nav = get_nav_from_toml(
-    "streamlit/pages_sections.toml" if sections else "streamlit/pages.toml"
+    "streamlit/pages.toml"
 )
 
 # 네비게이션
